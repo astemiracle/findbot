@@ -12,6 +12,11 @@ import config
 token = "6022796853:AAGwpnPObTv236MSaOfEFcYK69PpTp3ATGY"
 bot = telebot.TeleBot(token, num_threads = 50)
 
+if 'database' in os.environ:
+    mongo_client = MongoClient(os.environ['database'])
+else:
+    print('helloworld')
+
 mongo_client = MongoClient(os.environ['database'])
 db = mongo_client.dickfind
 users = db.users
