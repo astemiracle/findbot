@@ -9,7 +9,7 @@ from pymongo import MongoClient
 import traceback
 import config
 
-token = "6022796853:AAGwpnPObTv236MSaOfEFcYK69PpTp3ATGY"
+token = " "
 bot = telebot.TeleBot(token, num_threads = 50)
 
 if 'database' in os.environ:
